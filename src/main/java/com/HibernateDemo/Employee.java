@@ -12,22 +12,25 @@ import javax.persistence.Table;
 public class Employee{
 	
 	@Id
-	@Column(name="EmpId")
+	@Column(name="EmpId",nullable=false)
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int empId;
-	@Column(name="EmpName")
+	@Column(name="EmpName",nullable=false)
 	private String empName;
-	@Column(name="Salary")
+	@Column(name="Salary",nullable=false)
 	private double salary;
 
 	
+	
+	
+
 	public Employee(int empId, String empName, double salary) {
 		super();
 		this.empId = empId;
 		this.empName = empName;
 		this.salary = salary;
 	}
-	
+
 
 	@Override
 	public String toString() {
