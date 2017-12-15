@@ -1,20 +1,12 @@
 package com.HibernateDemo.StudentCrud;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="StudInfo")
 public class Student {
-	@Id
-	@Column(name="Roll_No")
+	
 	private int rollNo;
 	private String studName;
 	private String dept;
 	private int marks;
-	public Student(String studName, String dept, int marks) {
+	public Student(int rollNo,String studName, String dept, int marks) {
 		super();
 		this.rollNo = rollNo;
 		this.studName = studName;

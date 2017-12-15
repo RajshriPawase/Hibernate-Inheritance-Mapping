@@ -9,9 +9,10 @@ public class HibernateUtil {
 	public static SessionFactory getSessionFactory() throws MyException{
 		try{
 		if (sessionfactory == null) 
-			sessionfactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+			sessionfactory = new Configuration().configure().buildSessionFactory();
 		}catch(Exception e)
 		{
+			//e.printStackTrace();
 			throw new MyException("Hibernate Configuration File Error");
 		}
 		return sessionfactory;
