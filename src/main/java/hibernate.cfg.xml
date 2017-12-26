@@ -4,16 +4,17 @@
 	<session-factory>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/db</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/Mapping</property>
 		<property name="hbm2ddl.auto">create-drop</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">root</property>
+		<property name="hibernate.show_sql">true</property>
 <!-- 		<mapping class="com.HibernateDemo.Employee" />-->	
 	<!-- 	
-	For Test-per-class:	-->
+	For Test-per-class:	
 	<mapping class="com.HibernateDemo.InheritanceEx.College" />
 		<mapping class="com.HibernateDemo.InheritanceEx.Student" />
-		<mapping class="com.HibernateDemo.InheritanceEx.Student1" /> 
+		<mapping class="com.HibernateDemo.InheritanceEx.Student1" /> -->
 		<!--  For Test-per-Subclass:
 		<mapping class="com.HibernateDemo.InheritanceEx.CollegeInfo" />
 		<mapping class="com.HibernateDemo.InheritanceEx.StudentInfo" />
@@ -22,7 +23,41 @@
 		for Test-per-Concrete-class
 		<mapping class="com.HibernateDemo.InheritanceEx.CollegeInfo1" />
 		<mapping class="com.HibernateDemo.InheritanceEx.EnggStudent" />
-		<mapping class="com.HibernateDemo.InheritanceEx.MedicalStudent" /> -->
+		<mapping class="com.HibernateDemo.InheritanceEx.MedicalStudent" />--> 
+		<!--Hibernate Mapping 
+			One to One Unidirectional
+		<mapping class="com.HibernateMapping.Student" />
+		<mapping class="com.HibernateMapping.Address" />-->
+			<!--Hibernate Mapping 
+			One to One Bidirectional
+			
+		<mapping class="com.HibernateMapping.Student1" />
+		<mapping class="com.HibernateMapping.Address1" />-->
+		<!--Hibernate Mapping 
+			One to Many Unidirectional
+		<mapping class="com.HibernateMapping.College" />
+		<mapping class="com.HibernateMapping.Department" />-->
+		<!--Hibernate Mapping 
+			One to Many Bidirectional
+		<mapping class="com.HibernateMapping.College1" />
+		<mapping class="com.HibernateMapping.Department1" />-->
+		<!--Hibernate Mapping 
+			Many to one Unidirectional-->
+		<mapping class="com.HibernateMapping.Employee" />
+		<mapping class="com.HibernateMapping.Company" />
+		<!--Hibernate Mapping 
+			Many to one Bidirectional
+		<mapping class="com.HibernateMapping.Employee1" />
+		<mapping class="com.HibernateMapping.Company1" />-->
+		<!--Hibernate Mapping 
+			Many to Many Unidirectional
+		<mapping class="com.HibernateMapping.Book" />
+		<mapping class="com.HibernateMapping.Author" />-->
+		<!--Hibernate Mapping 
+			Many to Many Bidirectional-->
+			
+		<mapping class="com.HibernateMapping.Book1" />
+		<mapping class="com.HibernateMapping.Author1" />
 		
  </session-factory>
 </hibernate-configuration>

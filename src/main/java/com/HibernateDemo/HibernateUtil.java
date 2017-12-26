@@ -12,8 +12,8 @@ public class HibernateUtil {
 			sessionfactory = new Configuration().configure().buildSessionFactory();
 		}catch(Exception e)
 		{
-			//e.printStackTrace();
-			throw new MyException("Hibernate Configuration File Error");
+			e.printStackTrace();
+			//throw new MyException("Hibernate Configuration File Error");
 		}
 		return sessionfactory;
 	}
